@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	long long n, c1=0, c2=0;
+	cin>>n;
+	long long A[n][n];
+	for(int i=0; i<n; i++)
+	{
+		for(int j=0; j<n; j++)
+		{
+			cin>>A[i][j];
+		}
+		for(int j=0; j<n; j++)
+		{
+			if(i==j)
+			{
+				c1+=A[i][j];
+			}
+			if(i+j==n-1)
+			{
+				c2+=A[i][j];
+			}
+		}
+	}
+	if(n==1)
+	{
+		c2=c1;
+	}
+	cout<<c1<<" "<<c2;
+	return 0;
+}
